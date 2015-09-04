@@ -1,0 +1,21 @@
+.validation-valid {
+    color: #0074D9;
+}
+
+.validation-invalid {
+    color: #FF4136;
+}
+
+.msg-error {
+	 color: #FF4136;
+}
+
+#menu {
+    position: absolute;
+    right: 0px;
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}

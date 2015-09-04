@@ -1,0 +1,33 @@
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-white" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle"
+			ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+			<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+			<span class="icon-bar"></span> <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#"><img width="300px"
+			src="http://i.imgur.com/iwECEai.png?1" /></a>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" collapse="navCollapsed">
+		<ul class="nav navbar-nav" id="menu">
+			<li><a href="#">About Us</a></li>
+
+			<li><a href="#">Contact</a></li>
+			<li class="dropdown" dropdown=""><a href="#"
+				class="dropdown-toggle" dropdown-toggle="" data-toggle="dropdown">Curriculum
+					<b class="caret"></b>
+			</a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Math</a></li>
+					<li><a href="#">Software</a></li>
+					<li><a href="#">Engineering</a></li>
+					<li><a href="#">Academy</a></li>
+				</ul></li>
+		</ul>
+	</div>
+	<!-- /.navbar-collapse -->
+</nav>
