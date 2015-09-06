@@ -1,0 +1,51 @@
+.validation-valid {
+    color: #edd400;
+}
+
+.validation-invalid {
+    color: #FF4136;
+}
+
+.msg-error {
+	 color: #FF4136;
+}
+
+#menu {
+    position: absolute;
+    right: 0px;
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+.jumbotron{
+	background-image:url('http://www.aristotlecircle.com/sites/default/files/AC%20Peer%20Tutor.jpg');
+	position:relative;
+	top:100px;
+	background-size:cover;
+	height:600px;
+	
+}
+
+.jumbotron .container{
+	color:#edd400;
+	position:relative;
+	top:px;
+}
+.pitch .container h2{
+	color:#2e3436;
+	position:relative;
+	top:120px;
+	font-family:'glyphicons', halflings-regular;
+	font-size:30px;
+}
+
+.pitch .container p{
+	color:#555753;
+	position:relative;
+	top:130px;
+	font-family:'glyphicons', halflings-regular;
+	font-size:20px;
+}
