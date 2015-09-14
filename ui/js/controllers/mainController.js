@@ -34,7 +34,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 		//alert("checkusernameinput" + $scope.siForm.username);
 		//if ($scope.signinForm.$valid == true) {
 		alert("checkusernameinput" + $scope.siForm.suUsername);
-		var verify = $http({
+		$http({
 			method  : 'POST',
 			url     : '/signin',
 			data    : $.param($scope.siForm),  // pass in data as strings, si = Sign In

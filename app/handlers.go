@@ -3,13 +3,12 @@ package main
 import (
 	"fmt"
 	_ "github.com/lib/pq"
-	"github.com/tutoring-website/util"
+	"github.com/site/util"
 	"golang.org/x/crypto/bcrypt"
 	"log"
 	"net/http"
 )
 
-var valid = false
 
 func signupHandler(w http.ResponseWriter, r *http.Request) {
 	var (
@@ -38,6 +37,7 @@ func signupHandler(w http.ResponseWriter, r *http.Request) {
 
 func signinHandler(w http.ResponseWriter, r *http.Request) {
 	var dbpassword []byte
+	valid := false
 	username := r.FormValue("suUsername")
 	password := r.FormValue("suPassword")
 	signinPassword := []byte(password)
@@ -64,24 +64,6 @@ func signinHandler(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "http://localhost:8080/homepage/v.html", 302)
 }
 }
-
-func Redirect (w http.ResponseWriter, r *http.Request) {
-	
-	http.Redirect(w, r, "http://www.golang.org", 301)
+func homepageHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "http://localhost:8080/homepage/v.html", 302)
 }
-
-
-//func signoutHandler(response http.ResponseWriter, request *http.Request) {
-//	clearSession(response)
-//	http.Redirect(response, request, "/", 302)
-//}
-
-//func homePageHandler(response http.ResponseWriter, request *http.Request) {
-//	userName := getUserName(request)
-//	fmt.Println(valid)
-//	if valid == true {
-//		fmt.Fprintf(response, internalPage, userName)
-//	} else {
-//		http.Redirect(response, request, "/", 302)
-//	}
-//}
